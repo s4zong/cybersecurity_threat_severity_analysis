@@ -55,7 +55,7 @@ python dataset_processing.py PATH_TO_TAGGED_FILE
 
 #### Note
 
-(1) We notice some tweets are marked as "Not Available" when downloading through twitter API. We can not directly release our dataset in respect to Twitter's privacy policy.
+(1) We notice some tweets are marked as "Not Available" when downloading through twitter API. We can not directly release our dataset with respect to Twitter's privacy policy.
 
 (2) For annotated tweets, we have specified the entity along with location we want to replace. For your own data, you could use getEntitySegClass() and replaceEntityTarget() in utils.tagging_process.py.
 
@@ -68,7 +68,7 @@ python dataset_processing.py PATH_TO_TAGGED_FILE
 We have provided our pre-trained model under trained_model directory. For threat existence classifier, we use 4,000 annotated tweets. For threat severity classifier, we use 1,200 annotated tweets.
 
 #### Input data format
-Input data should be in .json format. We provide a sample input file for your reference. 
+Input data should be in .json format. We provide a sample input file sample_input.json for your reference. The classifier looks for 'text_TARGET' field.
 
 You could use writeJSONFile() in utils.io py for generating files.
 
