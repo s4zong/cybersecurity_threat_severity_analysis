@@ -39,7 +39,7 @@ Once you get all tweets downloaded, run prepare_dataset.py under dataset folder 
 
 We use Twitter NLP (https://github.com/aritter/twitter_nlp) for tokenization.
  
-We suggest using tagging tool in following way, which reads in json line format files and directly append a field 'tags' into the original file.
+We suggest using tagging tool in following way, which reads in json line format files and directly appends  'tags' field into the original file.
 
 ```
 cat ./dataset.json | python python/ner/extractEntities2_json.py > dataset_tagged.json
