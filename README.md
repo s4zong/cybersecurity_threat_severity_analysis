@@ -115,7 +115,9 @@ You could change n-gram window size by using -w flag. Please make sure you are u
       Ritter, Alan  and
       Mueller, Graham  and
       Wright, Evan",
-    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter
+     of the Association for Computational Linguistics: Human Language Technologies,
+     Volume 1 (Long and Short Papers)",
     month = jun,
     year = "2019",
     address = "Minneapolis, Minnesota",
