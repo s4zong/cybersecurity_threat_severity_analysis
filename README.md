@@ -55,7 +55,7 @@ python dataset_processing.py PATH_TO_TAGGED_FILE
 
 #### Note
 
-(1) We notice some tweets are marked as "Not Available" when downloading through twitter API. We can not directly release our dataset with respect to Twitter's privacy policy.
+(1) We notice some tweets are marked as "Not Available" when downloading through twitter API. We can not directly release our dataset given Twitter's privacy policy.
 
 (2) For annotated tweets, we have specified the entity along with location we want to replace. For your own data, you could use getEntitySegClass() and replaceEntityTarget() in utils.tagging_process.py.
 
