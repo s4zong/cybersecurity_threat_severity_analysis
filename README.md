@@ -29,7 +29,7 @@ We provide a file tweet_anno_id.tsv under dataset containing tweets ids we have 
 
 Actual tweet contents can be acquired by using Semeval Twitter data download script (https://github.com/aritter/twitter_download). Please follow instructions there to get tweets via Twitter API.
 
-Once you get all tweets downloaded (put downloaded.tsv under ./dataset folder), run prepare_dataset.py under dataset folder to recover the dataset we are using.
+Once you get all tweets downloaded, put downloaded.tsv under ./dataset folder. Then run prepare_dataset_for_tagging.py to prepare dataset.json file for tagging.
 
 ```
  python prepare_dataset_for_tagging.py 
@@ -52,6 +52,8 @@ There are some final steps to get our annotated dataset. Specifically, we need t
 ```
 python dataset_processing.py PATH_TO_TAGGED_FILE
 ```
+
+The final dataset file dataset_processed.json should be in ./dataset folder.
 
 #### Note
 
