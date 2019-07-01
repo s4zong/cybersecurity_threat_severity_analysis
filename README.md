@@ -29,7 +29,7 @@ We provide a file tweet_anno_id.tsv under dataset containing tweets ids we have 
 
 Actual tweet contents can be acquired by using Semeval Twitter data download script (https://github.com/aritter/twitter_download). Please follow instructions there to get tweets via Twitter API.
 
-Once you get all tweets downloaded, run prepare_dataset.py under dataset folder to recover the dataset we are using.
+Once you get all tweets downloaded (put downloaded.tsv under ./dataset folder), run prepare_dataset.py under dataset folder to recover the dataset we are using.
 
 ```
  python prepare_dataset_for_tagging.py 
@@ -39,7 +39,7 @@ Once you get all tweets downloaded, run prepare_dataset.py under dataset folder 
 
 We use Twitter NLP (https://github.com/aritter/twitter_nlp) for tokenization.
  
-We suggest using tagging tool in following way, which reads in json line format files and directly appends  'tags' field into the original file.
+We suggest using tagging tool in following way, which reads in json line format files and directly appends  'tags' field into the original file. Here dataset.json file is the output from prepare_dataset_for_tagging.py.
 
 ```
 cat ./dataset.json | python python/ner/extractEntities2_json.py > dataset_tagged.json
