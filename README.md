@@ -73,7 +73,7 @@ We have provided our pre-trained model under trained_model directory. For threat
 
 For a new batch of tweets, here are the pre-processing steps:
 
-(1) send all tweets for tagging. 
+(1) send all tweets for tagging
 
 Suppose you are using Twitter NLP, run 
 
@@ -87,18 +87,18 @@ should give you something like:
 zero-day/O adobe/B-ENTITY flash/I-ENTITY player/O vulnerability/O
 ```
 
-(2) replace extracted entities during tagging with <TARGET> token.
+(2) replace extracted entities with TARGET token
  
-For example, "adobe flash" is marked as an entity and we need to replace it with <TARGET>. There are some functions you could use in utils.tagging_process.py with detailed comments specifying inputs and outputs. Or you could write your own code. You only need to find a way to convert 
+For example, "adobe flash" is marked as an entity and we need to replace it with \<TARGET\>. You could either use functions in utils.tagging_process.py, or you could write your own code. The goal is to find a way to convert 
  
 ```
 zero-day/O adobe/B-ENTITY flash/I-ENTITY player/O vulnerability/O
 ```
 
-into
+to
 
 ```
-<TARGET> player vulnerability
+zero-day <TARGET> player vulnerability
 ```
 
 #### Classifier input data format
