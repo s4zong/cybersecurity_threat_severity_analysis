@@ -69,7 +69,39 @@ The final dataset file dataset_processed.json should be in ./dataset folder.
 
 We have provided our pre-trained model under trained_model directory. For threat existence classifier, we use 4,000 annotated tweets. For threat severity classifier, we use 1,200 annotated tweets.
 
-#### Input data format
+#### Preprocess your own data
+
+For a new batch of tweets, here are the pre-processing steps:
+
+1. Send all tweets for tagging. 
+
+Suppose you are using Twitter NLP, run 
+
+```
+cat YOUR_DATA.json | python python/ner/extractEntities2_json.py > YOUR_DATA_tagged.json
+```
+
+should give you something like:
+
+```
+zero-day/O adobe/B-ENTITY flash/I-ENTITY player/O vulnerability/O
+```
+
+2. Replace extracted entities during tagging with <TARGET> token.
+ 
+For example, "adobe flash" is marked as an entity and we need to replace it with <TARGET>. There are some functions you could use in utils.tagging_process.py with detailed comments specifying inputs and outputs. Or you could write your own code. You only need to find a way to convert 
+ 
+```
+zero-day/O adobe/B-ENTITY flash/I-ENTITY player/O vulnerability/O
+```
+
+into
+
+```
+<TARGET> player vulnerability
+```
+
+#### Classifier input data format
 Input data should be in .json format. We provide a sample input file sample_input.json for your reference. The classifier looks for 'text_TARGET' field.
 
 You could use writeJSONFile() in utils.io py for generating files.
